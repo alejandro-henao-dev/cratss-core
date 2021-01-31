@@ -1,0 +1,18 @@
+{
+  "name": "@rantasma/cratss-core",
+  "version": "1.0.0",
+  "description": "cratss core interface",
+  "main": "index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "css"
+  ],
+  "author": "RAT",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.5"
+  }
+}

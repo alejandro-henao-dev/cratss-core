@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "sass:list";
+
+@mixin addTheme($name:"", $theme){
+    @if $name==""{
+        $name:"defaut";
+        $cratssThemes:map.set($cratssThemes,"default",$theme) !global;
+    }@else{
+        $cratssThemes:map.set($cratssThemes,$name,$theme) !global;
+    }
+    
+};
+
+@function getTheme($name:"default"){
+    
+    @return map.get($cratssThemes,$name)
+};
+
+@function getThemes(){
+    $list:();
+
+    @each $key, $val in $cratssThemes{
+        $list:list.append($list,$key);
+    };
+
+    @return $list;
+};
