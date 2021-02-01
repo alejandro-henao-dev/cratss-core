@@ -1,3 +1,4 @@
 $cratssThemes:();
-@import "./src/themeGetter.scss";
-@import "./src/variableGetters.scss";
+@import "./src/functions/themeGetter.scss";
+@import "./src/functions/variableGetters.scss";
+@import "./src/mixins/theme";
