@@ -1,6 +1,6 @@
 {
-  "name": "@rantasma/cratss-core",
-  "version": "1.0.0",
+  "name": "cratss-core",
+  "version": "1.0.1",
   "description": "cratss core interface",
   "main": "index.scss",
   "scripts": {

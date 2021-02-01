@@ -4,9 +4,9 @@
 @mixin addTheme($name:"", $theme){
     @if $name==""{
         $name:"defaut";
-        $cratssThemes:map.set($cratssThemes,"default",$theme) !global;
+        $cratssThemes:map.set($cratssThemes,"default",$theme) ;
     }@else{
-        $cratssThemes:map.set($cratssThemes,$name,$theme) !global;
+        $cratssThemes:map.set($cratssThemes,$name,$theme) ;
     }
     
 };
