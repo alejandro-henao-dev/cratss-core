@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "sass:list";
+@use "../variables" as mainVars;
 
 @function getTypes($theme:getTheme(),$groupName){
     $list:();
@@ -16,7 +17,7 @@
     
     @return map.get(
         map.get(
-            map.get($cratssThemes,$themeName),
+            map.get(mainVars.$cratssThemes,$themeName),
             $groupName
         ),
         $type

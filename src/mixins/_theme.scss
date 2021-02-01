@@ -1,4 +1,5 @@
 @use '../functions/themeGetter' as themeGetter;
+@use '../functions/variableGetters' as variableGetter;
 
 @mixin forAllThemes{
     $themes:themeGetter.getThemes();
@@ -10,7 +11,7 @@
 };
 
 
-@mixin forAllThemeTypes($section){
+@mixin forTypesInThemes($section){
     @include forAllThemes using ($theme){
         @include forAllTypes($theme,$section ) using ($type){
             @content ($theme,$type)
@@ -19,7 +20,7 @@
 };
 
 @mixin forAllTypes($theme,$section){
-    $types: themeGetter.getTypes(themeGetter.getTheme($theme),$section);
+    $types: variableGetter.getTypes(themeGetter.getTheme($theme),$section);
     @each $type in $types{
         @content($type);
     }
