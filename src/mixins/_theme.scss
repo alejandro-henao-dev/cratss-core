@@ -1,4 +1,4 @@
-@use './functions/themeGetter' as themeGetter;
+@use '../functions/themeGetter' as themeGetter;
 
 @mixin forAllThemes{
     $themes:themeGetter.getThemes();
